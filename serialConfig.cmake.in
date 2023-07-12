@@ -1,0 +1,14 @@
+set(SERIAL_VERSION 0.0.0)
+
+@PACKAGE_INIT@
+
+set(PACKAGE_PREFIX_DIR "/usr/local")
+set(SERIAL_LIB_DIRS "${PACKAGE_PREFIX_DIR}/lib/serial")
+set(SERIAL_INCLUDE_DIRS "${PACKAGE_PREFIX_DIR}/include")
+
+set(SERIAL_LIBS serial)
+
+link_directories(${SERIAL_LIB_DIRS})
+include_directories(${SERIAL_INCLUDE_DIRS})
+
+check_required_components(serial)
